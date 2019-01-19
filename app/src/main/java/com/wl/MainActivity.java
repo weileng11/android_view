@@ -5,15 +5,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import com.wl.ui.ActView1;
+import com.wl.ui.ActViewPath2;
 
 public class MainActivity extends AppCompatActivity
 {
+	private Button view1;
+	private Button view2;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		findViewById(R.id.view1).setOnClickListener(new viewTest());
+		findViewById(R.id.view2).setOnClickListener(new viewTest());
 	}
 	
 	public class viewTest implements View.OnClickListener
@@ -23,6 +29,9 @@ public class MainActivity extends AppCompatActivity
 			switch(v.getId()){
 			case R.id.view1:
 				showActivity(MainActivity.this,ActView1.class);
+				break;
+			case R.id.view2:
+				showActivity(MainActivity.this,ActViewPath2.class);
 				break;
 			}
 		}

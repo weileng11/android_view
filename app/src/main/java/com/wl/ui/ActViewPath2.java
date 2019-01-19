@@ -12,11 +12,11 @@ import com.wl.R;
  * @date: 2018/12/24  
  * @time: 15:49
  */
-public class ActView1 extends AppCompatActivity
+public class ActViewPath2 extends AppCompatActivity
 {
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.act_view1);
+		setContentView(R.layout.act_view2);
 	}
 }
