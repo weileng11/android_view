@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import com.wl.ui.ActView1;
 import com.wl.ui.ActViewPath2;
+import com.wl.ui.ActViewPathRxxx;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity
 		setContentView(R.layout.activity_main);
 		findViewById(R.id.view1).setOnClickListener(new viewTest());
 		findViewById(R.id.view2).setOnClickListener(new viewTest());
+		findViewById(R.id.view3).setOnClickListener(new viewTest());
 	}
 	
 	public class viewTest implements View.OnClickListener
@@ -32,6 +34,9 @@ public class MainActivity extends AppCompatActivity
 				break;
 			case R.id.view2:
 				showActivity(MainActivity.this,ActViewPath2.class);
+				break;
+			case R.id.view3:
+				showActivity(MainActivity.this,ActViewPathRxxx.class);
 				break;
 			}
 		}

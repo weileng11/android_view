@@ -20,5 +20,6 @@
 		
 		<activity android:name=".ui.ActView1"></activity>
 		<activity android:name=".ui.ActViewPath2"></activity>
+		<activity android:name=".ui.ActViewPathRxxx"></activity>
 	</application>
 </manifest>

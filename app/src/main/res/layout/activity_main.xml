@@ -21,4 +21,11 @@
 		android:layout_height="wrap_content"
 		android:text="简单的自定义PATH绘制"
 		/>
+	
+	<Button
+		android:id="@+id/view3"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="PATH绘制其他view"
+		/>
 </LinearLayout>

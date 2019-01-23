@@ -117,11 +117,34 @@ public class PathTestView extends View
 		//startAngle 开始角度   forceMoveTo是否强制使用MoveTo
 		
 		//7.圆弧
-		canvas.scale(1,-1);                         // <-- 注意 翻转y坐标轴
-		path.lineTo(100,100);
-		RectF oval = new RectF(0,0,300,300);
-		path.addArc(oval,0,270);
+		//canvas.scale(1,-1);                         // <-- 注意 翻转y坐标轴
+		//path.lineTo(100,100);
+		//RectF oval = new RectF(0,0,300,300);
+		//path.addArc(oval,0,270);
 		// path.arcTo(oval,0,270,true);             // <-- 和上面一句作用等价
+		
+		//canvas.scale(1,-1);                         // <-- 注意 翻转y坐标轴
+		//path.lineTo(100,100);
+		//RectF oval = new RectF(0,0,300,300);
+		//path.arcTo(oval,0,270); //连线
+		// path.arcTo(oval,0,270,false);             // <-- 和上面一句作用等价
+		
+		//将新的path赋值到现有path
+		//canvas.scale(1,-1);                         // <-- 注意 翻转y坐标轴
+		//path.addRect(-200,-200,200,200, Path.Direction.CW);
+		//Path src = new Path();                      // src添加一个圆
+		//src.addCircle(0,0,100, Path.Direction.CW);
+		//path.set(src);                              // 大致相当于 path = src;
+		
+		//从运行效果图可以看出，虽然我们在dst中添加了一个矩形，
+		// 但是并没有表现出来，所以，当dst中存在内容时，dst中原有的内容会被清空，而存放平移后的path
+		canvas.scale(1,-1);                         // <-- 注意 翻转y坐标轴
+		path.addCircle(0,0,100, Path.Direction.CW);
+		Path dst = new Path();                      // dst中添加一个矩形
+		dst.addRect(-200,-200,200,200, Path.Direction.CW);
+		path.offset(300,0,dst);                     // 平移
+		canvas.drawPath(path,mPaint);               // 绘制path
+		mPaint.setColor(Color.BLUE);                // 更改画笔颜色
 		
 		canvas.drawPath(path, mPaint);
 	}
