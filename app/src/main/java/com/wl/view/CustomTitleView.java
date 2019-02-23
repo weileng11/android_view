@@ -165,13 +165,18 @@ public class CustomTitleView extends View
 	}
 	
 	@Override
+	protected void onSizeChanged(int w, int h, int oldw, int oldh){
+		super.onSizeChanged(w, h, oldw, oldh);
+	}
+	
+	@Override
 	protected void onDraw(Canvas canvas)
 	{
 		//绘制背景颜色
 		mPaint.setColor(Color.BLACK);
 		mPaint2.setColor(Color.BLUE);
-		//矩形
-		canvas.drawRect(0, 0, getMeasuredWidth(), getMeasuredHeight(), mPaint);
+		////矩形
+		//canvas.drawRect(0, 0, getMeasuredWidth(), getMeasuredHeight(), mPaint);
 		//圆
 		//float width = getWidth();
 		//float height = getHeight();
@@ -183,16 +188,16 @@ public class CustomTitleView extends View
 		//canvas.drawArc(rect,0,60,true,mPaint);
 		//canvas.drawArc(rect,60,30,true,mPaint2);
 		
-		//绘制图标
+		////绘制图标
 		Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
 		float width = (getWidth()-bitmap.getWidth())/2;
 		float height = (getHeight()-bitmap.getHeight())/2;
 		canvas.drawBitmap(bitmap,width,height,mPaint);
-		
-		
-		
+
+
+
 		mPaint.setColor(mTitleTextColor);
-		Log.i("info","宽度xxx" +(mBound.width() /2)+"高度"+mBound.height() / 2);
+		Log.i("info", "宽度xxx"+(mBound.width()/2)+"高度"+mBound.height()/2);
 		Log.i("info","宽度"+getWidth()+"---"+(getWidth() / 2 - mBound.width() / 2)+"高度"+getHeight());
 		//具体位置  161-131
 		canvas.drawText(mTitleText, getWidth() / 2 - mBound.width() / 2, getHeight() / 2 + mBound.height() / 2, mPaint);
