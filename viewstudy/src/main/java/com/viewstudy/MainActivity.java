@@ -5,8 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import com.viewstudy.ui.CustomImageViewAct;
 import com.viewstudy.ui.NumBerAct;
 
+/**
+ * @author PC
+ */
 public class MainActivity extends AppCompatActivity
 {
 	@Override
@@ -14,6 +18,7 @@ public class MainActivity extends AppCompatActivity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		findViewById(R.id.number).setOnClickListener(new viewTest());
+		findViewById(R.id.customimage).setOnClickListener(new viewTest());
 	}
 	
 	public class viewTest implements View.OnClickListener
@@ -24,9 +29,9 @@ public class MainActivity extends AppCompatActivity
 			case R.id.number:
 				showActivity(MainActivity.this,NumBerAct.class);
 				break;
-			//case R.id.view2:
-			//	showActivity(MainActivity.this,ActViewPath2.class);
-			//	break;
+			case R.id.customimage:
+				showActivity(MainActivity.this,CustomImageViewAct.class);
+				break;
 			//case R.id.view3:
 			//	showActivity(MainActivity.this,ActViewPathRxxx.class);
 			//	break;

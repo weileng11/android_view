@@ -15,7 +15,7 @@ import java.util.Set;
 /**
  * @author: ${bruce}
  * @project: android_view
- * @package: com.viewstudy.view
+ * @package: com.viewstudy.view （1）
  * @description:  https://blog.csdn.net/lmj623565791/article/details/24252901
  * @date: 2019/2/23  
  * @time: 17:57

@@ -13,10 +13,10 @@
 		/>
 	
 	<Button
-		android:id="@+id/view2"
+		android:id="@+id/customimage"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="简单的自定义PATH绘制"
+		android:text="简单的自定义图文绘制"
 		/>
 	
 	<Button
